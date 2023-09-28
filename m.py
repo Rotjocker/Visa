@@ -11,7 +11,7 @@ client.start()
 for cc in open("F4.txt").read().split("\n"):
     try:
         client.send_message(ch ,f"/chk {cc}")
-        time.sleep(random.randint(10,12))
+        time.sleep(random.randint(20,25))
         mssag = client.get_messages(ch, limit=1)
         if "ANTI_SPAM" in str(mssag[0].message):
             t = str(mssag[0].message).split("again after ")[1]
